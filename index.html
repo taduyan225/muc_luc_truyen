@@ -67,6 +67,8 @@ body{
 <div class="chapter-box" id="chapterList"></div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+
 const chapters = [
 {
 title:"Chapter 1: Đây là tiêu đề chương rất dài để test dấu ba chấm",
@@ -112,6 +114,9 @@ link:"chapter8.html"
 
 const chapterList = document.getElementById("chapterList");
 
+/* tránh bị nhân đôi khi WordPress load lại */
+chapterList.innerHTML = "";
+
 chapters.forEach(chapter => {
     const a = document.createElement("a");
     a.href = chapter.link;
@@ -123,6 +128,8 @@ chapters.forEach(chapter => {
     `;
 
     chapterList.appendChild(a);
+});
+
 });
 </script>
 
