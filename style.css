@@ -28,8 +28,9 @@
 }
 .chapter:hover{
     background:#f2f2f2;
+    transform:translateX(5px);
+    transition:0.2s;
 }
-
 .chapter-title{
     white-space:nowrap;
     overflow:hidden;
